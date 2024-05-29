@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Register() {
   const[formData, setFormData] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   // handles the input fields
   const handleChange = (e) => {
@@ -34,6 +35,7 @@ function Register() {
         setError(true);
         return;
       }
+      navigate('/login');
     } catch (error) {
       setLoading(false);
       setError(true);
