@@ -13,8 +13,8 @@ function Header() {
           <Link to='/about'>
             <li>About</li>
           </Link>
-          <Link to='/Login'>
-            <li>Login</li>
+          <Link to='/register'>
+            <li>Register</li>
           </Link>
         </ul>
       </div>
